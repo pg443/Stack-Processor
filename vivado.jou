@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar 20 11:13:50 2019
+# Process ID: 14148
+# Current directory: C:/Users/gaura/Google/ECEC661/Zybo_projects/stack_processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14012 C:\Users\gaura\Google\ECEC661\Zybo_projects\stack_processor\stack_processor.xpr
+# Log file: C:/Users/gaura/Google/ECEC661/Zybo_projects/stack_processor/vivado.log
+# Journal file: C:/Users/gaura/Google/ECEC661/Zybo_projects/stack_processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gaura/Google/ECEC661/Zybo_projects/stack_processor/stack_processor.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source splite.tcl
+add_force {/splite/ck} -radix hex {1 0ns} {0 25ps} -repeat_every 50ps
+add_force {/splite/run} -radix hex {0 0ns}
+add_force {/splite/reset} -radix hex {1 0ns}
+add_force {/splite/bus2mem_en} -radix hex {1 0ns}
+add_force {/splite/bus2mem_we} -radix hex {0 0ns}
+add_force {/splite/bus2mem_addr} -radix hex {0 0ns}
+add_force {/splite/bus2mem_data_in} -radix hex {0 0ns}
+run 50 ps
+add_force {/splite/reset} -radix hex {0 0ns}
+run 50 ps
+add_force {/splite/bus2mem_data_in} -radix hex {1 0ns}
+run 50 ps
+add_force {/splite/bus2mem_addr} -radix hex {1 0ns}
+add_force {/splite/bus2mem_data_in} -radix bin {00000000000000000000000001100100 0ns}
+run 50 ps
+relaunch_sim
+add_force {/splite/ck} -radix hex {1 0ns} {0 25ps} -repeat_every 50ps
+add_force {/splite/run} -radix hex {0 0ns}
+add_force {/splite/reset} -radix hex {1 0ns}
+add_force {/splite/bus2mem_en} -radix hex {1 0ns}
+add_force {/splite/bus2mem_we} -radix hex {0 0ns}
+add_force {/splite/bus2mem_addr} -radix hex {0 0ns}
+add_force {/splite/bus2mem_data_in} -radix hex {0 0ns}
+run 50 ps
+add_force {/splite/reset} -radix hex {0 0ns}
+run 50 ps
+add_force {/splite/bus2mem_data_in} -radix hex {1 0ns}
+run 50 ps
+add_force {/splite/bus2mem_addr} -radix hex {1 0ns}
+add_force {/splite/bus2mem_data_in} -radix bin {00000000000000000000000001100100 0ns}
+run 50 ps
+add_force {/splite/bus2mem_addr} -radix hex {2 0ns}
+add_force {/splite/bus2mem_data_in} -radix bin {00000000000000000000000000000001 0ns}
+run 50 ps
+add_force {/splite/bus2mem_addr} -radix hex {3 0ns}
+add_force {/splite/bus2mem_data_in} -radix bin {00000000000000000000000011001000 0ns}
+run 50 ps
+add_force {/splite/bus2mem_addr} -radix hex {4 0ns}
+add_force {/splite/bus2mem_data_in} -radix bin {00000000000000000000000011111111 0ns}
+run 50 ps
+add_force {/splite/bus2mem_en} -radix hex {0 0ns}
+add_force {/splite/bus2mem_we} -radix hex {0 0ns}
+add_force {/splite/run} -radix hex {1 0ns}
+run 50 ps
+add_force {/splite/bus2mem_en} -radix hex {1 0ns}
+add_force {/splite/bus2mem_we} -radix hex {0 0ns}
+add_force {/splite/bus2mem_addr} -radix bin {0010000000 0ns}
+run 50 ps
+add_force {/splite/bus2mem_addr} -radix bin {0010000001 0ns}
+run 50 ps
+close_sim
